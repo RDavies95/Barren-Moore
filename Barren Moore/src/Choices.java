@@ -36,12 +36,7 @@ public class Choices {
         return input;
     }
 
-    public void Movement(String direction, int distance)
-    {
 
-
-
-    }
 
 
 }

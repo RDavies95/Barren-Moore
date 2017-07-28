@@ -32,5 +32,10 @@ public class ScreenMessages {
         outputBlankLine();
     }
 
+    public void outputDirectionMessage(int x, int y)
+    {
+        System.out.println("You are at " + x + "," + y);
+    }
+
 
 }

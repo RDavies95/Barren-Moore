@@ -1,17 +1,13 @@
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
 
 /**
  * Created by Administrator on 28/07/2017.
  */
 public class Calculations {
 
-    public int CalcDistance(int a, int b)
-    {
-        int i = 0;
 
-
-        return i;
-    }
 
     public void timeDelaySec(int a)
     {
@@ -21,7 +17,5 @@ public class Calculations {
             e.printStackTrace();
         }
     }
-
-
 
 }

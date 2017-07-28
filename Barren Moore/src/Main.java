@@ -6,6 +6,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class Main {
 
+
+
     public static void main(String[] args) throws InterruptedException {
 
 
@@ -14,6 +16,11 @@ public class Main {
      Scanner scan = new Scanner(System.in);
      StringExpress se = new StringExpress();
      Choices choice = new Choices();
+     Grid g = new Grid();
+        int desx;
+        int desy;
+
+
 
 
     sc.outputSpeechMessage("Welcome Adventurer, you have began a journey which will end with two ways...either defeating the dark lord furbie or dying along the journey. Only you decide your fate...");
@@ -51,9 +58,25 @@ public class Main {
      sc.outputSpeechMessage("But you should go visit moe in the local tavern and i'm sure i'll be checking in on you throughout your journey.");
      sc.outputSpeechMessage("Remember if you get lost use that compass thingy, anyway in a while...alligator, wait that's not ri...");
      sc.outputScreenMessage("*Cosmo Disappears*");
-     sc.outputScreenMessage("*Looking at your compass you notice the arrow pointing north with the number 5*");
+     sc.outputScreenMessage("*Looking at your compass and map you notice the arrow pointing south with the grid (5,4) glowing. You are currently at (0,4)*");
      sc.outputNormalmessage("Which direction would you like to travel? (North - n, East - e, South - s, West - w");
-     String direction = se.formatString(scan.nextLine());
+     g.setCurxpos(0);
+     g.setCurypos(4);
+        desx = 5;
+        desy = 4;
+     do
+     {
+         String direction = se.formatString(scan.nextLine());
+         g.fillGrid(5,4,direction);
+         sc.outputBlankLine();
+         sc.outputDirectionMessage(g.curxpos,g.curypos);
+
+     }
+     while(!(desx == g.curxpos && desy == g.curypos));
+
+    System.out.println("h");
+     //String newDirection = g.CalcDistance(direction);
+    // sc.outputScreenMessage("*Looking at your compass it shows " + newDirection  +" *");
 
 
 
